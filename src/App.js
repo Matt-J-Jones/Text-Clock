@@ -2,11 +2,18 @@ import { useEffect } from 'react';
 import './App.css';
 import TextClock from './time';
 
-function updateTimeColor(elementId){
-  const timeTextElement = document.getElementsByClassName(elementId);
-  console.log(timeTextElement)
-  for (let i = 0; i < timeTextElement.length; i++) {
-    timeTextElement[i].style.color = '#999';
+function resetTimeColor(elementId) {
+  const timeTextElements = document.querySelectorAll(`.${elementId}`);
+  console.log(timeTextElements);
+  for (let i = 0; i < timeTextElements.length; i++) {
+    timeTextElements[i].style.color = '#333';
+  }
+}
+
+function activateTimeColor(elementId) {
+  const timeTextElements = document.querySelectorAll(`.${elementId}`);
+  for (let i = 0; i < timeTextElements.length; i++) {
+    timeTextElements[i].style.color = '#999';
   }
 }
 
@@ -16,11 +23,16 @@ function App() {
     const interval = setInterval(() => {
       const textTime = new TextClock();
       const currentTime = textTime.formatTimeAsText();
-      updateTimeColor(currentTime[3]);
-      updateTimeColor(currentTime[2]);
-      updateTimeColor(currentTime[1]);
-      updateTimeColor(currentTime[0]);
-    }, 60000)
+      
+      currentTime.forEach( item => {
+        resetTimeColor(item)
+      });
+
+      currentTime.forEach( item => {
+        activateTimeColor(item)
+      });
+
+    }, 1000);
 
     return () => clearInterval(interval);
   }, []);
