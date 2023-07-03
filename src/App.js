@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
 import './App.css';
 import TextClock from './time';
 
@@ -11,14 +11,19 @@ function updateTimeColor(elementId){
 }
 
 function App() {
-  const textTime = new TextClock();
-  const currentTime = textTime.formatTimeAsText();
-  updateTimeColor(currentTime[3]);
-  updateTimeColor(currentTime[2]);
-  updateTimeColor(currentTime[1]);
-  updateTimeColor(currentTime[0]);
-  console.log(currentTime)
-  
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const textTime = new TextClock();
+      const currentTime = textTime.formatTimeAsText();
+      updateTimeColor(currentTime[3]);
+      updateTimeColor(currentTime[2]);
+      updateTimeColor(currentTime[1]);
+      updateTimeColor(currentTime[0]);
+    }, 60000)
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="App">
@@ -39,8 +44,8 @@ function App() {
           </div>
 
           <div className="lineThree">
-            <div className="twenty">TWENTY</div>
-            <div className="five">FIVE</div>
+            <div className="twenty twentyfive">TWENTY</div>
+            <div className="five twentyfive">FIVE</div>
             <div className="letter">X</div>
           </div>
 

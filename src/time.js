@@ -42,15 +42,18 @@ class TextClock {
       3: "aquarter",
       4: "ten",
       5: "five",
-      6: ""
+      6: "",
+      7: "twentyfive"
     }
 
     if (time < 5) { return minMap[6] }
-    else if (time > 5 && time < 10) { return minMap[5] }   // FIVE
-    else if (time > 9 && time < 15) { return minMap[4] }  // TEN
-    else if (time > 14 && time < 20) { return minMap[3] }  // QUARTER
-    else if (time > 19 && time < 30) { return minMap[2] }  // TWENTY
-    else if (time > 29 && time < 40) { return minMap[1] }  // HALF
+    else if (time > 5 && time < 10) { return minMap[5] }
+    else if (time > 9 && time < 15) { return minMap[4] }
+    else if (time > 14 && time < 20) { return minMap[3] }
+    else if (time > 19 && time < 25) { return minMap[2] }
+    else if (time > 24 && time < 30) { return minMap[7] }
+    else if (time > 29 && time < 35) { return minMap[1] } 
+    else if (time > 34 && time < 40) { return minMap[7] } 
     else if (time > 39 && time < 45) { return minMap[2] }
     else if (time > 44 && time < 50) { return minMap[3] } 
     else if (time > 49 && time < 55) { return minMap[4] } 
