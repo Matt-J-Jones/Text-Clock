@@ -2,37 +2,87 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
+  background-color: #222;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  color: #333;
 }
 
-.App-link {
-  color: #61dafb;
+.text-container {
+  width: 200px; 
+  font-family: monospace; 
+  font-size: calc(20px + 2vmin);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Junk Letters */
+.letter {
+  margin: 0 0px; 
+}
+
+.lineOne, .lineTwo, .lineThree, .lineFour, .lineFive, .lineSix, .lineSeven, .lineEight, .lineNine, .lineTen {
+  display: flex;
+}
+
+/* Line One Items */
+.itis, .am, .pm {
+  color: #666;
+  margin-right: 0px;
+}
+
+/* Line Two Items */
+.aquarter {
+  color: #666;
+  margin-right: 0px;
+}
+
+/* Line Three Items */
+.five, .twenty {
+  color: #666;
+  margin-right: 0px;
+}
+
+/* Line Four Items */
+.half, .ten, .to {
+  color: #666;
+  margin-right: 0px;
+}
+
+/* Line Five Items */
+.past, .nineNumber {
+  color: #666;
+  margin-right: 0px;
+}
+
+/* Line Six Items */
+.oneNumber, .sixNumber, .threeNumber {
+  color: #666;
+  margin-right: 0px;
+}
+
+/* Line Seven Items */
+.fourNumber, .fiveNumber, .twoNumber {
+  color: #666;
+  margin-right: 0px;
+}
+
+/* Line Eight Items */
+.eightNumber, .elevenNumber{
+  color: #666;
+  margin-right: 0px;
+}
+
+/* Line Nine Items */
+.sevenNumber, .twelveNumber{
+  color: #666;
+  margin-right: 0px;
+}
+
+/* Line Ten Items */
+.tenNumber, .oclock{
+  color: #666;
+  margin-right: 0px;
 }
