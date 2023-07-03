@@ -23,66 +23,109 @@
   margin: 0 0px; 
 }
 
-.lineOne, .lineTwo, .lineThree, .lineFour, .lineFive, .lineSix, .lineSeven, .lineEight, .lineNine, .lineTen {
+.lineOne, .lineTwo, .lineThree, .lineFour, .lineFive, .lineSix, .lineSeven, .lineEight, .lineNine, .lineTen, .lineEleven {
   display: flex;
 }
 
 /* Line One Items */
-.itis, .am, .pm {
-  color: #666;
-  margin-right: 0px;
+.itis {
+  color: #999;
 }
+
+.oclock{
+  color: #999;
+}
+
+.am {
+  color: #333;
+}
+
+.pm {
+  color: #333;
+}
+
 
 /* Line Two Items */
 .aquarter {
-  color: #666;
-  margin-right: 0px;
+  color: #333;
 }
 
 /* Line Three Items */
-.five, .twenty {
-  color: #666;
-  margin-right: 0px;
+.twenty {
+  color: #333;
+}
+
+.five {
+  color: #333;
 }
 
 /* Line Four Items */
-.half, .ten, .to {
-  color: #666;
-  margin-right: 0px;
+.half {
+  color: #333;
+}
+
+.ten {
+  color: #333;
+}
+
+.to {
+  color: #333;
 }
 
 /* Line Five Items */
-.past, .nineNumber {
-  color: #666;
-  margin-right: 0px;
+.past {
+  color: #333;
+}
+
+.nineNumber {
+  color: #333;
 }
 
 /* Line Six Items */
-.oneNumber, .sixNumber, .threeNumber {
-  color: #666;
-  margin-right: 0px;
+.oneNumber {
+  color: #333;
+}
+
+.sixNumber {
+  color: #333;
+}
+
+.threeNumber {
+  color: #333;
 }
 
 /* Line Seven Items */
-.fourNumber, .fiveNumber, .twoNumber {
-  color: #666;
-  margin-right: 0px;
+.fourNumber {
+  color: #333;
+}
+
+.fiveNumber {
+  color: #333;
+}
+
+.twoNumber {
+  color: #333;
 }
 
 /* Line Eight Items */
-.eightNumber, .elevenNumber{
-  color: #666;
-  margin-right: 0px;
+.eightNumber {
+  color: #333;
+}
+
+.elevenNumber{
+  color: #333;
 }
 
 /* Line Nine Items */
-.sevenNumber, .twelveNumber{
-  color: #666;
-  margin-right: 0px;
+.sevenNumber {
+  color: #333;
+}
+
+.twelveNumber{
+  color: #333;
 }
 
 /* Line Ten Items */
-.tenNumber, .oclock{
-  color: #666;
-  margin-right: 0px;
+.tenNumber {
+  color: #333;
 }

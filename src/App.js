@@ -1,76 +1,96 @@
 import logo from './logo.svg';
 import './App.css';
+import TextClock from './time';
+
+function updateTimeColor(elementId){
+  const timeTextElement = document.getElementsByClassName(elementId);
+  console.log(timeTextElement)
+  for (let i = 0; i < timeTextElement.length; i++) {
+    timeTextElement[i].style.color = '#999';
+  }
+}
 
 function App() {
+  const textTime = new TextClock();
+  const currentTime = textTime.formatTimeAsText();
+  updateTimeColor(currentTime[3]);
+  updateTimeColor(currentTime[2]);
+  updateTimeColor(currentTime[1]);
+  updateTimeColor(currentTime[0]);
+  console.log(currentTime)
+  
+
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <div class="text-container">
-          <div class="lineOne">
-            <div class="itis">IT</div>
-            <div class="letter">L</div>
-            <div class="itis">IS</div>
-            <div class="letter">AS</div>
-            <div class="am">AM</div>
-            <div class="pm">PM</div>
+        <div className="text-container">
+          <div className="lineOne">
+            <div className="itis">IT</div>
+            <div className="letter">L</div>
+            <div className="itis">IS</div>
+            <div className="letter">ASOKMN</div>
           </div>
 
-          <div class="lineTwo">
-            <div class="aquarter">A</div>
-            <div class="letter">C</div>
-            <div class="aquarter">QUARTER</div>
-            <div class="letter">DC</div>
+          <div className="lineTwo">
+            <div className="aquarter">A</div>
+            <div className="letter">C</div>
+            <div className="aquarter">QUARTER</div>
+            <div className="letter">DC</div>
           </div>
 
-          <div class="lineThree">
-            <div class="twenty">TWENTY</div>
-            <div class="five">FIVE</div>
-            <div class="letter">X</div>
+          <div className="lineThree">
+            <div className="twenty">TWENTY</div>
+            <div className="five">FIVE</div>
+            <div className="letter">X</div>
           </div>
 
-          <div class="lineFour">
-            <div class="half">HALF</div>
-            <div class="letter">S</div>
-            <div class="ten">TEN</div>
-            <div class="letter">F</div>
-            <div class="to">TO</div>
+          <div className="lineFour">
+            <div className="half">HALF</div>
+            <div className="letter">S</div>
+            <div className="ten">TEN</div>
+            <div className="letter">F</div>
+            <div className="to">TO</div>
           </div>
 
-          <div class="lineFive">
-            <div class="past">PAST</div>
-            <div class="letter">ERU</div>
-            <div class="nineNumber">NINE</div>
+          <div className="lineFive">
+            <div className="past">PAST</div>
+            <div className="letter">ERU</div>
+            <div className="nineNumber">NINE</div>
           </div>
 
-          <div class="lineSix">
-            <div class="oneNumber">ONE</div>
-            <div class="sixNumber">SIX</div>
-            <div class="threeNumber">THREE</div>
+          <div className="lineSix">
+            <div className="oneNumber">ONE</div>
+            <div className="sixNumber">SIX</div>
+            <div className="threeNumber">THREE</div>
           </div>
 
-          <div class="lineSeven">
-            <div class="fourNumber">FOUR</div>
-            <div class="fiveNumber">FIVE</div>
-            <div class="twoNumber">TWO</div>
+          <div className="lineSeven">
+            <div className="fourNumber">FOUR</div>
+            <div className="fiveNumber">FIVE</div>
+            <div className="twoNumber">TWO</div>
           </div>
 
-          <div class="lineEight">
-            <div class="eightNumber">EIGHT</div>
-            <div class="elevenNumber">ELEVEN</div>
+          <div className="lineEight">
+            <div className="eightNumber">EIGHT</div>
+            <div className="elevenNumber">ELEVEN</div>
           </div>
 
-          <div class="lineNine">
-            <div class="sevenNumber">SEVEN</div>
-            <div class="twelveNumber">TWELVE</div>
+          <div className="lineNine">
+            <div className="sevenNumber">SEVEN</div>
+            <div className="twelveNumber">TWELVE</div>
           </div>
 
-          <div class="lineTen">
-          <div class="tenNumber">TEN</div>
-          <div class="letter">SE</div>
-          <div class="oclock">OCLOCK</div>
+          <div className="lineTen">
+            <div className="tenNumber">TEN</div>
+            <div className="letter">SE</div>
+            <div className="oclock">OCLOCK</div>
           </div>
-          
+
+          <div className="lineEleven">
+            <div className="letter">SEKLOPM</div>
+            <div className="am">AM</div>
+            <div className="pm">PM</div>
+          </div>
         </div>
       </header>
     </div>
