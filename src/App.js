@@ -4,7 +4,6 @@ import TextClock from './time';
 
 function resetTimeColor(elementId) {
   const timeTextElements = document.querySelectorAll(`.${elementId}`);
-  console.log(timeTextElements);
   for (let i = 0; i < timeTextElements.length; i++) {
     timeTextElements[i].style.color = '#333';
   }
@@ -17,20 +16,23 @@ function activateTimeColor(elementId) {
   }
 }
 
-function App() {
+let prevTime = [];
 
+function App() {
+  const textTime = new TextClock();
   useEffect(() => {
     const interval = setInterval(() => {
-      const textTime = new TextClock();
       const currentTime = textTime.formatTimeAsText();
-      
-      currentTime.forEach( item => {
-        resetTimeColor(item)
-      });
 
-      currentTime.forEach( item => {
-        activateTimeColor(item)
-      });
+      if (currentTime !== prevTime){
+        prevTime.forEach( item => {
+          resetTimeColor(item)
+        });
+        currentTime.forEach( item => {
+          activateTimeColor(item)
+        });
+        prevTime = currentTime;
+      }
 
     }, 1000);
 

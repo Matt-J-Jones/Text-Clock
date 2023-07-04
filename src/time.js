@@ -9,6 +9,7 @@ class TextClock {
   formatTimeAsText () {
     const rawTime = this.getCurrentTime();
     return [this.returnMin(rawTime[1]), this.returnPastOrTo(rawTime[1]), this.returnHour(rawTime[0]), this.checkAmPm(rawTime[0])]
+    // return [this.returnMin(rawTime[1]), this.returnPastOrTo(rawTime[1]), this.returnHour(3), this.checkAmPm(rawTime[0])]
   }
 
   checkAmPm (time) {
@@ -67,8 +68,8 @@ class TextClock {
       3: ""
     }
 
-    if (time < 30 && time > 4) { return pastToMap[1] } 
-    else if ( time > 30) { return pastToMap[2] }
+    if (time < 35 && time > 4) { return pastToMap[1] } 
+    else if ( time > 34) { return pastToMap[2] }
     else { return pastToMap[3] }
   }
 }
